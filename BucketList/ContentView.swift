@@ -4,7 +4,6 @@
 //
 //  Created by Joseph Faragalla on 2020-09-01.
 //  Copyright © 2020 Joseph Farag Alla. All rights reserved.
-//
 
 import SwiftUI
 
