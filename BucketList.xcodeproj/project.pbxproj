@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		926878BF2502BE60009FA186 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926878BE2502BE60009FA186 /* MapView.swift */; };
 		92F90F1824FF37B5004DBFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */; };
 		92F90F1A24FF37B5004DBFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */; };
 		92F90F1C24FF37B5004DBFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1B24FF37B5004DBFB1 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		926878BE2502BE60009FA186 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		92F90F1424FF37B5004DBFB1 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */,
 				92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */,
 				92F90F1B24FF37B5004DBFB1 /* ContentView.swift */,
+				926878BE2502BE60009FA186 /* MapView.swift */,
 				92F90F1D24FF37B5004DBFB1 /* Assets.xcassets */,
 				92F90F2224FF37B5004DBFB1 /* LaunchScreen.storyboard */,
 				92F90F2524FF37B5004DBFB1 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F90F1824FF37B5004DBFB1 /* AppDelegate.swift in Sources */,
+				926878BF2502BE60009FA186 /* MapView.swift in Sources */,
 				92F90F1A24FF37B5004DBFB1 /* SceneDelegate.swift in Sources */,
 				92F90F1C24FF37B5004DBFB1 /* ContentView.swift in Sources */,
 			);

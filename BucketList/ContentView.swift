@@ -6,6 +6,7 @@
 //  Copyright © 2020 Joseph Farag Alla. All rights reserved.
 
 import SwiftUI
+import LocalAuthentication
 
 
 struct User: Identifiable, Comparable {
@@ -40,6 +41,14 @@ struct ContentView: View {
 }
 
 
+
+
+
+
+
+
+
+
 struct WritingDataToDocumentsDirectory: View {
     //whats the difference between writing stuff to document directory vs core data vs userDefaults?
     func getDocumentDirectory() -> URL {
@@ -66,6 +75,15 @@ struct WritingDataToDocumentsDirectory: View {
         }
     }
 }
+
+
+
+
+
+
+
+
+
 
 enum LoadingState {
     case loading, success, failed
@@ -109,6 +127,63 @@ struct FailedView: View {
 
 
 
+
+
+
+
+
+
+struct UsingMapKit: View {
+    var body: some View {
+        MapView()
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+
+
+struct UsingFaceIDTouchID: View {
+    
+    @State private var isUnlocked = false
+    
+    
+    var body: some View {
+        VStack {
+            if self.isUnlocked {
+                Text("Unlocked")
+            } else {
+                Text("Locked")
+            }
+        }
+    .onAppear(perform: authenticate)
+    }
+    
+    func authenticate() {
+        let context =  LAContext()
+        var error: NSError?
+        
+        //check wether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            //it is possible, go ahead and use it
+            let reason = "We need to unlock your data"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (success, authenticationError) in
+                //authentication has now been completed
+                //what is the puropose of dispatchQueue.main.async?
+                DispatchQueue.main.async {
+                    if success {
+                        //authenticated successfully
+                        self.isUnlocked = true
+                    } else {
+                        //there was a problem
+                    }
+                }
+            }
+        } else {
+            //no biometrics (ex ipod)
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
