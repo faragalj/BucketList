@@ -14,6 +14,7 @@
 		92F90F1E24FF37B5004DBFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F1D24FF37B5004DBFB1 /* Assets.xcassets */; };
 		92F90F2124FF37B5004DBFB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F2024FF37B5004DBFB1 /* Preview Assets.xcassets */; };
 		92F90F2424FF37B5004DBFB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F2224FF37B5004DBFB1 /* LaunchScreen.storyboard */; };
+		92FC3732250BFEE0005C60CE /* MapView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC3731250BFEE0005C60CE /* MapView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		92F90F2024FF37B5004DBFB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92F90F2324FF37B5004DBFB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F90F2524FF37B5004DBFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92FC3731250BFEE0005C60CE /* MapView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */,
 				92F90F1B24FF37B5004DBFB1 /* ContentView.swift */,
 				926878BE2502BE60009FA186 /* MapView.swift */,
+				92FC3731250BFEE0005C60CE /* MapView2.swift */,
 				92F90F1D24FF37B5004DBFB1 /* Assets.xcassets */,
 				92F90F2224FF37B5004DBFB1 /* LaunchScreen.storyboard */,
 				92F90F2524FF37B5004DBFB1 /* Info.plist */,
@@ -152,6 +155,7 @@
 				92F90F1824FF37B5004DBFB1 /* AppDelegate.swift in Sources */,
 				926878BF2502BE60009FA186 /* MapView.swift in Sources */,
 				92F90F1A24FF37B5004DBFB1 /* SceneDelegate.swift in Sources */,
+				92FC3732250BFEE0005C60CE /* MapView2.swift in Sources */,
 				92F90F1C24FF37B5004DBFB1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
