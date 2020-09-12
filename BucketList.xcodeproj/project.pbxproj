@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		926878BF2502BE60009FA186 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926878BE2502BE60009FA186 /* MapView.swift */; };
+		92E46109250D048900DDB5D9 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E46108250D048900DDB5D9 /* MKPointAnnotation-ObservableObject.swift */; };
+		92E4610B250D060A00DDB5D9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E4610A250D060A00DDB5D9 /* EditView.swift */; };
+		92E4610D250D0B1900DDB5D9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E4610C250D0B1900DDB5D9 /* Result.swift */; };
 		92F90F1824FF37B5004DBFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */; };
 		92F90F1A24FF37B5004DBFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */; };
 		92F90F1C24FF37B5004DBFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F90F1B24FF37B5004DBFB1 /* ContentView.swift */; };
 		92F90F1E24FF37B5004DBFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F1D24FF37B5004DBFB1 /* Assets.xcassets */; };
 		92F90F2124FF37B5004DBFB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F2024FF37B5004DBFB1 /* Preview Assets.xcassets */; };
 		92F90F2424FF37B5004DBFB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F90F2224FF37B5004DBFB1 /* LaunchScreen.storyboard */; };
-		92FC3732250BFEE0005C60CE /* MapView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC3731250BFEE0005C60CE /* MapView2.swift */; };
+		92FC3732250BFEE0005C60CE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC3731250BFEE0005C60CE /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		926878BE2502BE60009FA186 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		92E46108250D048900DDB5D9 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		92E4610A250D060A00DDB5D9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		92E4610C250D0B1900DDB5D9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		92F90F1424FF37B5004DBFB1 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +31,7 @@
 		92F90F2024FF37B5004DBFB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92F90F2324FF37B5004DBFB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F90F2524FF37B5004DBFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92FC3731250BFEE0005C60CE /* MapView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView2.swift; sourceTree = "<group>"; };
+		92FC3731250BFEE0005C60CE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +67,10 @@
 				92F90F1724FF37B5004DBFB1 /* AppDelegate.swift */,
 				92F90F1924FF37B5004DBFB1 /* SceneDelegate.swift */,
 				92F90F1B24FF37B5004DBFB1 /* ContentView.swift */,
-				926878BE2502BE60009FA186 /* MapView.swift */,
-				92FC3731250BFEE0005C60CE /* MapView2.swift */,
+				92FC3731250BFEE0005C60CE /* MapView.swift */,
+				92E4610A250D060A00DDB5D9 /* EditView.swift */,
+				92E46108250D048900DDB5D9 /* MKPointAnnotation-ObservableObject.swift */,
+				92E4610C250D0B1900DDB5D9 /* Result.swift */,
 				92F90F1D24FF37B5004DBFB1 /* Assets.xcassets */,
 				92F90F2224FF37B5004DBFB1 /* LaunchScreen.storyboard */,
 				92F90F2524FF37B5004DBFB1 /* Info.plist */,
@@ -153,9 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F90F1824FF37B5004DBFB1 /* AppDelegate.swift in Sources */,
-				926878BF2502BE60009FA186 /* MapView.swift in Sources */,
+				92E46109250D048900DDB5D9 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				92F90F1A24FF37B5004DBFB1 /* SceneDelegate.swift in Sources */,
-				92FC3732250BFEE0005C60CE /* MapView2.swift in Sources */,
+				92E4610B250D060A00DDB5D9 /* EditView.swift in Sources */,
+				92FC3732250BFEE0005C60CE /* MapView.swift in Sources */,
+				92E4610D250D0B1900DDB5D9 /* Result.swift in Sources */,
 				92F90F1C24FF37B5004DBFB1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

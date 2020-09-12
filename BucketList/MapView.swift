@@ -1,60 +1,87 @@
 //
-//  MapView.swift
+//  MapView2.swift
 //  BucketList
 //
-//  Created by Joseph Faragalla on 2020-09-04.
+//  Created by Joseph Faragalla on 2020-09-11.
 //  Copyright © 2020 Joseph Farag Alla. All rights reserved.
 //
 import MapKit
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
-    //adding the coordinator to communicate to and from the swiftui View
-    class Coordinator: NSObject, MKMapViewDelegate {
-        //need to reference MapView in our class, this is how we get it in here
-        var parent: MapView
-        
-        init(_ parent: MapView) {
-            self.parent = parent
+    @Binding var centerCoordinate: CLLocationCoordinate2D
+    @Binding var selectedPlace: MKPointAnnotation?
+    @Binding var showingPlaceDetails: Bool
+    
+    
+    var annotations: [MKPointAnnotation]
+    
+    func makeUIView(context: Context) -> MKMapView {
+        let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        return mapView
+    }
+    
+    func updateUIView(_ view: MKMapView, context: Context) {
+        //if what is in the array doesnt match what is on the map, update it
+        if annotations.count != view.annotations.count {
+            view.removeAnnotations(view.annotations)
+            view.addAnnotations(annotations)
         }
-        //now we get to set the action for if anything happens
-        
-        //when it changes visible region
-        func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-            print(mapView.centerCoordinate)
-        }
-        
-        //customizing the way the point looks
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
-            view.canShowCallout = true
-            return view
-        }
-        
-        
     }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
-    
-    //make and return the view
-    func makeUIView(context: UIViewRepresentableContext<MapView>) -> MKMapView {
-        let mapView = MKMapView()
-        mapView.delegate = context.coordinator
-        //adding an item on the map
-        let annotation = MKPointAnnotation()
-        annotation.title = "London"
-        annotation.subtitle = "Capital of England"
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: 0.13)
-        mapView.addAnnotation(annotation)
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
         
-        
-        return mapView
+        init(_ parent: MapView) {
+            self.parent = parent
+            
+        }
+        func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+            parent.centerCoordinate = mapView.centerCoordinate
+        }
+        //creating the "i" that shows more info. Reusing views to improve performance
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            //this is our unique identifier for view reuse
+            let identifier = "Placemark"
+            
+            //attempt to find a cell we can recycle
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            
+            if annotationView == nil {
+                //we didnt find one. make a new one
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                
+                //allow this to show popup info
+                annotationView?.canShowCallout = true
+                
+                //attach an information button to the view
+                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+                
+            } else {
+                //we have a view to reuse, so give it the new annotation
+                annotationView?.annotation = annotation
+                
+            }
+            
+            //whether its the new view or recycled, send it back
+            return annotationView
+        }
+        //gets called when the "i" is tapped. We get to decide what happens
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            
+            guard let placeMark = view.annotation as? MKPointAnnotation else { return }
+            
+            //set selected place and show alert
+            parent.selectedPlace = placeMark
+            parent.showingPlaceDetails = true
+        }
     }
     
-    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-        
-    }
 }
+
